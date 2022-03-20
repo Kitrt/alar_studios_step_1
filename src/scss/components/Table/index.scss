@@ -1,0 +1,38 @@
+.table {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  &__container {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+
+    & tr,
+    & td,
+    & th, {
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    width: calc(50% - 10px);
+
+    & + & {
+      margin-left: 10px;
+    }
+  }
+}

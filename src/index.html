@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alar Studios</title>
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root" class="wrapper"></div>
+
+    <script type="text/template" id="template-form-add-phone">
+        <form id='add-phone' class='form'>
+            <div class='form__container'>
+                <div class='field form__block'>
+                    <input class="field__elem" type='text' name='name' placeholder='Name'/>
+                </div>
+                <div class='field form__block'>
+                    <input class="field__elem" type='text' name='phone' placeholder='+7(888)888-88-88'/>
+                </div>
+            </div>
+            <div class='form__bottom'>
+                <button class="button form__btn" type='submit'>Save</button>
+            </div>
+        </form>
+    </script>
+
+    <script type="text/template" id="template-table">
+        <div id="show-phones" class="table">
+            <table class="table__container">
+                <thead><tr><th>Name</th><th>Phone</th><th>Action</th></tr></thead>
+                <tbody id="show-phones-list"></tbody>
+            </table>
+        </div>
+    </script>
+
+    <script type="text/template" id="template-table-item">
+        <tr>
+            <td>%name%</td>
+            <td>%phone%</td>
+            <td>
+                <div class="table__action">
+                    <button data-edit data-id="%id%" class="button table__btn" type="button">Edit</button>
+                    <button data-delete data-id="%id%" class="button table__btn" type="button">Delete</button>
+                </div>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/template" id="template-table-edit">
+        <tr>
+            <td>
+                <div class="field table__field">
+                    <input class="field__elem" type='text' name='name' value="%name%" placeholder='Name'/>
+                </div>
+            </td>
+            <td>
+                <div class="field table__field">
+                    <input class="field__elem" type='text' name='phone' value="%phone%" placeholder='+7(888)888-88-88'/>
+                </div>
+            </td>
+            <td>
+                <div class="table__action">
+                    <button data-cancel data-id="%id%" class="button table__btn">Cancel</button>
+                    <button data-ok data-id="%id%" class="button table__btn">Ok</button>
+                </div>
+            </td>
+        </tr>
+    </script>
+</body>
+</html>
