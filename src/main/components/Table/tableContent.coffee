@@ -36,7 +36,7 @@ export TableContent = View.extend({
 
     new TableEdit({
       id: editId,
-      el: document.querySelector("[data-edit][data-id="+editId+"]").closest("tr")
+      el: document.querySelector("[data-edit][data-id=#{editId}]").closest("tr")
     });
   deleteItem: (event) ->
     target = event.target;

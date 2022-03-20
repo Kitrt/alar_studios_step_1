@@ -10,7 +10,7 @@ export TableEdit = View.extend({
   template: document.querySelector("#template-table-edit").innerHTML
   events: {
     "click [data-cancel]": "cancel",
-    "click [data-ok]": "update",
+    "click [data-save]": "update",
   },
   render: (option) ->
     renderTemplate = "";
@@ -30,15 +30,15 @@ export TableEdit = View.extend({
 
     editItem = PhonesCollection.models.find((item) -> item.id == target.getAttribute("data-id"))
 
-    fieldName = parentElem.querySelector("[name=name]").value;
-    fieldPhone = parentElem.querySelector("[name=phone]").value;
+    fieldNameElem = parentElem.querySelector("[name=name]");
+    fieldPhoneElem = parentElem.querySelector("[name=phone]");
 
     isInValid = Validate({
-      name: {value: fieldName, el: parentElem.querySelector("[name=name]")},
-      phone: {value: fieldPhone, el: parentElem.querySelector("[name=phone]")}
+      name: {value: fieldNameElem.value, el: fieldNameElem},
+      phone: {value: fieldPhoneElem.value, el: fieldPhoneElem}
     });
 
     if (isInValid)
-      editItem.set({name: fieldName, phone: fieldPhone});
+      editItem.set({name: fieldNameElem.value, phone: fieldPhoneElem.value});
       PhonesCollection.trigger("update");
 });

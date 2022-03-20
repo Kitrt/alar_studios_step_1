@@ -11,17 +11,17 @@
     <div id="root" class="wrapper"></div>
 
     <script type="text/template" id="template-form-add-phone">
-        <form id='add-phone' class='form'>
-            <div class='form__container'>
-                <div class='field form__block'>
-                    <input class="field__elem" type='text' name='name' placeholder='Name'/>
+        <form id="add-phone" class="form">
+            <div class="form__container">
+                <div class="field form__block">
+                    <input class="field__elem" type="text" name="name" placeholder="Name"/>
                 </div>
-                <div class='field form__block'>
-                    <input class="field__elem" type='text' name='phone' placeholder='+7(888)888-88-88'/>
+                <div class="field form__block">
+                    <input class="field__elem" type="text" name="phone" placeholder="+7(888)888-88-88"/>
                 </div>
             </div>
-            <div class='form__bottom'>
-                <button class="button form__btn" type='submit'>Save</button>
+            <div class="form__bottom">
+                <button class="button form__btn" type="submit">Save</button>
             </div>
         </form>
     </script>
@@ -52,18 +52,18 @@
         <tr>
             <td>
                 <div class="field table__field">
-                    <input class="field__elem" type='text' name='name' value="%name%" placeholder='Name'/>
+                    <input class="field__elem" type="text" name="name" value="%name%" placeholder="Name"/>
                 </div>
             </td>
             <td>
                 <div class="field table__field">
-                    <input class="field__elem" type='text' name='phone' value="%phone%" placeholder='+7(888)888-88-88'/>
+                    <input class="field__elem" type="text" name="phone" value="%phone%" placeholder="+7(888)888-88-88"/>
                 </div>
             </td>
             <td>
                 <div class="table__action">
                     <button data-cancel data-id="%id%" class="button table__btn">Cancel</button>
-                    <button data-ok data-id="%id%" class="button table__btn">Ok</button>
+                    <button data-save data-id="%id%" class="button table__btn">Save</button>
                 </div>
             </td>
         </tr>

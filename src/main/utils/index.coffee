@@ -22,7 +22,7 @@ export Validate = (props) ->
     if !value.value
       errors.push {key, el: value.el, text: "Вы не заполнили поле."};
     if key == "phone" && value.value && !props.phone.value.match(/^(\+7|8)[\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/)
-      errors.push {key: "phone", el: props.phone.el, text: "Неверно заполнено поле, формат заполнения +7(888)888-88-88."};
+      errors.push {key: "phone", el: props.phone.el, text: "Неверно заполнено поле, пример заполнения +7(888)888-88-88."};
 
   for prop in errors
     prop.el.classList.add("field__elem--error");
