@@ -8,7 +8,7 @@ export TableContent = View.extend({
   initialize: () ->
     this.listenTo(PhonesCollection, "update", this.render);
     this.render();
-  template: document.querySelector("#template-table-item").innerHTML
+  template: document.querySelector("#template-table-item").innerHTML,
   events: {
     "click [data-edit]": "editItem",
     "click [data-delete]": "deleteItem"
@@ -41,7 +41,7 @@ export TableContent = View.extend({
   deleteItem: (event) ->
     target = event.target;
 
-    deleteItem = PhonesCollection.models.find((item) -> item.id == target.getAttribute("data-id"))
+    deleteItem = PhonesCollection.models.find((item) -> item.id == target.getAttribute("data-id"));
 
     PhonesCollection.remove(deleteItem);
 });

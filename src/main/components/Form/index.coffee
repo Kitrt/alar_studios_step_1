@@ -9,7 +9,7 @@ import {nanoid, Validate} from "../../utils/index.coffee";
 export Form = View.extend({
   initialize: ->
     this.render();
-  template: document.querySelector("#template-form-add-phone").innerHTML
+  template: document.querySelector("#template-form-add-phone").innerHTML,
   events: {
     "submit #add-phone": "addPhone"
   },

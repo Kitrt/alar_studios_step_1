@@ -7,11 +7,11 @@ import {TableContent} from "./tableContent.coffee";
 export Table = View.extend({
   initialize: ->
     this.render();
-  template: document.querySelector("#template-table").innerHTML
+  template: document.querySelector("#template-table").innerHTML,
   render: ->
     this.el.insertAdjacentHTML("afterbegin", this.template);
 
     new TableContent({
-      el: document.querySelector("#show-phones-list"),
+      el: document.querySelector("#show-phones-list")
     });
 });
